@@ -1,0 +1,30 @@
+<h1 [ngClass]="{
+  'orange': h1Style,
+  'large': !h1Style
+}">Home</h1>
+
+<h1 [ngStyle]="{
+  'color': h1Style ? 'orange' : 'pink',
+  'font-size': !h1Style ? '1em' : '4em'
+}">Style</h1>
+
+<button (click)="firstClick()">Click Me</button>
+
+<h1>Users</h1>
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>
+
+<p>
+  Tuariki Ngamoki - 2042331
+</p>
+<p>
+  I311 - Advanced Web Solutions
+</p>
+<p>
+  AngularJS Assignment
+</p>
